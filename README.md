@@ -6,7 +6,13 @@ On the other hand, the map-view did not provide enough details about the courts,
 
 The 2 reasons listed above prompted me into making this simple project where you can best evaluate your options based on various filters, such as number of courts, availability of lights, public vs club courts, accessibility during winter, etc. 
 
-At the moment, the filters need to be implemented in code. The intention in the future is to create a simple GUI for ease of use, hosted on a simple website. This will be the main objective for the next phase of this project. 
+### Next steps:
+
+1. At the moment, the filters need to be implemented in code. The intention in the future is to create a simple GUI for ease of use, hosted on a simple website. This will be the main objective for the next phase of this project. 
+2. ~~Fix csv database to improve accuracy.~~
+3. Improved search feature that allows fuzzy matching with tolarence for skipped workds
+4. Overlay public transportation options & bike share stations :: not straight forward.
+5. 
 
 ### Acknowledgement
 
