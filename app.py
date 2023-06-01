@@ -1,6 +1,9 @@
 import dash
-import dash_core_components as dcc
-import dash_html_components as html
+# import dash_core_components as dcc
+# import dash_html_components as html
+from dash import dcc
+from dash import html
+
 import dash_leaflet as dl
 import pandas as pd
 from dash.dependencies import Input, Output
@@ -11,6 +14,9 @@ df = pd.read_csv('tennis_courts_toronto_full_cleaned_v2.csv')
 
 # Create a Dash instance
 app = dash.Dash(__name__)
+
+# add this line to exposre the flask server instance as the server. 
+server = app.server
 
 # Define the layout
 app.layout = html.Div(children=[
