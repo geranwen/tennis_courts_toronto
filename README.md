@@ -8,11 +8,13 @@ The 2 reasons listed above prompted me into making this simple project where you
 
 ### Next steps:
 
-1. At the moment, the filters need to be implemented in code. The intention in the future is to create a simple GUI for ease of use, hosted on a simple website. This will be the main objective for the next phase of this project. 
+1. ~~At the moment, the filters need to be implemented in code. The intention in the future is to create a simple GUI for ease of use, hosted on a simple website. This will be the main objective for the next phase of this project.~~
 2. ~~Fix csv database to improve accuracy.~~
-3. Improved search feature that allows fuzzy matching with tolarence for skipped workds
-4. Overlay public transportation options & bike share stations :: not straight forward.
-5. 
+3. Improved search feature that allows fuzzy matching with tolarence for skipped workds, and possibly return top 3 matches
+4. Implement filter by conditions (winter, lights, public/club, etc.)
+5. Overlay public transportation options & bike share stations :: not straight forward, which is why it will be given lower priority. 
+6. Show public vs private in different color-ed pins on map. 
+
 
 ### Acknowledgement
 
