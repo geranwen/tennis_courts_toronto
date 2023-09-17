@@ -19,47 +19,51 @@ server = app.server
 
 # Define the layout
 app.layout = html.Div(children=[
-    html.H1(children='Tennis Courts in Toronto - 20230916'),
+    html.H1(children='Tennis Courts in Toronto', style={'text-align': 'center', 'margin-left': '20px'}),
     html.Div([
+        html.Label('Search: ', style={'text-align': 'center', 'font-weight': 'bold'}),
         dcc.Input(
             id='search-input',
             type='text',
-            placeholder='Enter a place name'
+            placeholder='Enter a place name',
+            style={'width': '240px'}
         ),
         html.Div(id='search-output')
-    ]),
+    ], style={'text-align': 'center', 'margin-bottom': '20px', 'margin-left': '10px', 'margin-right': '10px'}),
     html.Div([
-        html.Label('Select Type:'),
-        dcc.Dropdown(
-            id='type-dropdown',
-            options=[{'label': i, 'value': i} for i in df['type'].unique()],
-            multi=True
-        ),
-    ]),
-    html.Div([
-        html.Label('Select Lights:'),
-        dcc.Dropdown(
-            id='lights-dropdown',
-            options=[{'label': i, 'value': i} for i in df['lights'].unique()],
-            multi=True
-        ),
-    ]),
-    html.Div([
-        html.Label('Select Courts:'),
-        dcc.Dropdown(
-            id='courts-dropdown',
-            options=[{'label': i, 'value': i} for i in df['courts'].unique()],
-            multi=True
-        ),
-    ]),
-    html.Div([
-        html.Label('Winter Play Available:'),
-        dcc.Dropdown(
-            id='winter-play-dropdown',
-            options=[{'label': i, 'value': i} for i in df['winter_play'].dropna().unique()],
-            multi=True
-        ),
-    ]),
+        html.Div([
+            html.Label('Select Type:'),
+            dcc.Dropdown(
+                id='type-dropdown',
+                options=[{'label': i, 'value': i} for i in df['type'].unique()],
+                multi=True
+            ),
+        ], style={'width': '160px', 'display': 'inline-block', 'margin-left': '10px', 'margin-right': '10px'}),
+        html.Div([
+            html.Label('Select Lights:'),
+            dcc.Dropdown(
+                id='lights-dropdown',
+                options=[{'label': i, 'value': i} for i in df['lights'].unique()],
+                multi=True
+            ),
+        ], style={'width': '160px', 'display': 'inline-block', 'margin-left': '10px', 'margin-right': '10px'}),
+        html.Div([
+            html.Label('Select Courts:'),
+            dcc.Dropdown(
+                id='courts-dropdown',
+                options=[{'label': i, 'value': i} for i in df['courts'].unique()],
+                multi=True
+            ),
+        ], style={'width': '160px', 'display': 'inline-block', 'margin-left': '10px', 'margin-right': '10px'}),
+        html.Div([
+            html.Label('Winter Availability:'),
+            dcc.Dropdown(
+                id='winter-play-dropdown',
+                options=[{'label': i, 'value': i} for i in df['winter_play'].dropna().unique()],
+                multi=True
+            ),
+        ], style={'width': '160px', 'display': 'inline-block', 'margin-left': '10px', 'margin-right': '10px'}),
+    ], style={'text-align': 'center', 'margin-bottom': '10px'}),
     dl.Map(id='map', center=[df['latitude'].mean(), df['longitude'].mean()], zoom=11, children=[
         dl.TileLayer(),
     ], style={'width': '100%', 'height': '85vh', 'margin': "auto", "display": "block"}),
