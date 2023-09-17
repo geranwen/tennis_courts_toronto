@@ -8,6 +8,8 @@ from fuzzywuzzy import process
 
 # Load your data
 df = pd.read_csv('tennis_courts_toronto_full_cleaned_v2.csv')
+# modify col `winter_play` in df so that empty cell are filled with `No`
+df['winter_play'] = df['winter_play'].fillna('No')
 
 # Create a Dash instance
 app = dash.Dash(__name__)
@@ -17,7 +19,7 @@ server = app.server
 
 # Define the layout
 app.layout = html.Div(children=[
-    html.H1(children='Tennis Courts in Toronto'),
+    html.H1(children='Tennis Courts in Toronto - 20230916'),
     html.Div([
         dcc.Input(
             id='search-input',
@@ -73,13 +75,13 @@ app.layout = html.Div(children=[
      Input('winter-play-dropdown', 'value')]
 )
 def update_output(value, selected_types, selected_lights, selected_courts, selected_winter_play):
-    if selected_types is None:
+    if not selected_types:
         selected_types = df['type'].unique().tolist()
-    if selected_lights is None:
+    if not selected_lights:
         selected_lights = df['lights'].unique().tolist()
-    if selected_courts is None:
+    if not selected_courts:
         selected_courts = df['courts'].unique().tolist()
-    if selected_winter_play is None:
+    if not selected_winter_play:
         selected_winter_play = df['winter_play'].dropna().unique().tolist()
 
     filtered_df = df[df['type'].isin(selected_types) & df['lights'].isin(selected_lights) 
