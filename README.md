@@ -7,7 +7,7 @@ On the other hand, the map view did not provide enough details about the courts,
 The 2 reasons listed above prompted me into making this simple project. The end goal is to create a simple web app where you can search and compare your options based on various filters, such as number of courts, availability of lights, public vs club courts, accessibility during winter, etc. 
 
 ### MVP
-The MVP branch exists to preserve the state of the development, when it is ready to be presented as MVP, but scrappy nonetheless. 
+The MVP branch exists to preserve the state of the development, when it is ready to be presented as MVP, but scrappy nonetheless.
 
 ### Next steps:
 
