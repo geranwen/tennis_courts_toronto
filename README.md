@@ -4,7 +4,7 @@ The public website provided by the city can be hard to use, since it did not pro
 
 On the other hand, the map-view did not provide enough details about the courts, making the selection process difficult. 
 
-The 2 reasons listed above prompted me into making this simple project where you can best evaluate your options based on various filters, such as number of courts, availability of lights, public vs club courts, accessibility during winter, etc. 
+The 2 reasons listed above prompted me into making this simple project: a website where you can search for and evaluate your tennis court options. In addition to text-based search, users can also filter by number of courts, availability of lights at night, public vs club courts, accessibility during winter, etc. 
 
 ### Next steps:
 
@@ -12,9 +12,8 @@ The 2 reasons listed above prompted me into making this simple project where you
 2. ~~Fix csv database to improve accuracy.~~
 3. Improved search feature that allows fuzzy matching with tolarence for skipped workds, and possibly return top 3 matches
 4. Implement filter by conditions (winter, lights, public/club, etc.)
-5. Overlay public transportation options & bike share stations :: not straight forward, which is why it will be given lower priority. 
+5. Overlay public transportation options & bike share stations. (not straight forward, which is why it will be given lower priority)
 6. Show public vs private in different color-ed pins on map. 
-
 
 ### Acknowledgement
 
