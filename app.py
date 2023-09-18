@@ -19,7 +19,7 @@ server = app.server
 
 # Define the layout
 app.layout = html.Div(children=[
-    html.H1(children='Tennis Courts in Toronto', style={'text-align': 'center', 'margin-left': '20px'}),
+    html.H1(children='Tennis Courts in Toronto', style={'text-align': 'center', 'margin-top': '0', 'padding-top': '15px'}),	
     html.Div([
         html.Label('Search: ', style={'text-align': 'center', 'font-weight': 'bold'}),
         dcc.Input(
@@ -67,7 +67,7 @@ app.layout = html.Div(children=[
     dl.Map(id='map', center=[df['latitude'].mean(), df['longitude'].mean()], zoom=11, children=[
         dl.TileLayer(),
     ], style={'width': '100%', 'height': '85vh', 'margin': "auto", "display": "block"}),
-])
+], style={"background-color": "#f0f0f0"})
 
 # Update the map based on the search input
 @app.callback(
